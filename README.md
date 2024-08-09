@@ -16,9 +16,8 @@ In environments protected by advanced endpoint detection and response (EDR) solu
 
 MultiPEASS is built upon the original `WinPEAS.bat` script but introduces a fundamental change: instead of running all checks in sequence within a single process, each check is executed as a separate process. Here's a simplified overview of how it works:
 
-1. **Initialization:** MultiPEASS begins by setting up the environment and determining which checks to run.
-2. **Process Creation:** For each check, MultiPEASS spawns a new process. This process runs the specific check, collects the output, and then terminates.
-3. **Result Aggregation:** The output from each individual process is collected and displayed in the console, just like in WinPEAS.
+1. **Process Creation:** For each check, MultiPEASS spawns a new process. This process runs the specific check, collects the output, and then terminates.
+2. **Result Aggregation:** The output from each individual process is collected and displayed in the console, just like in WinPEAS.
 
 ## Usage
 
