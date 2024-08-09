@@ -22,7 +22,7 @@ MultiPeas is built upon the original `WinPEAS.bat` script but introduces a funda
 
 ## Usage
 
-Make sure the checks.txt file is in the same directory as the executable.
+Make sure the all_checks.txt file is in the same directory as the executable.
 Run MultiPeas as you would run WinPEAS.bat:
 
 ```bash
