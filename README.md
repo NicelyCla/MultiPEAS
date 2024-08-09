@@ -1,37 +1,37 @@
-# MultiPEASS
+# MultiPEAS
 
-MultiPEASS is a modified version of the popular Windows enumeration script `WinPEASS.bat`. The key enhancement in MultiPEASS is its ability to invoke a new process for each individual check. This design is specifically aimed at improving compatibility with endpoint protection tools like Crowdstrike Falcon, which may flag certain checks as suspicious. By isolating each check in its own process, MultiPEASS ensures that the entire enumeration process is not terminated if a single check is detected and blocked.
+MultiPEAS is a modified version of the popular Windows enumeration script `WinPEAS.bat`. The key enhancement in MultiPEAS is its ability to invoke a new process for each individual check. This design is specifically aimed at improving compatibility with endpoint protection tools like Crowdstrike Falcon, which may flag certain checks as suspicious. By isolating each check in its own process, MultiPEAS ensures that the entire enumeration process is not terminated if a single check is detected and blocked.
 
 ## Features
 
 - **Process Isolation:** Each check is run as a separate process, reducing the risk of full script termination by security tools.
-- **Comprehensive Enumeration:** Performs the same extensive set of checks as WinPEASS, including privilege escalation vectors, system information, and security configurations.
+- **Comprehensive Enumeration:** Performs the same extensive set of checks as WinPEAS, including privilege escalation vectors, system information, and security configurations.
 - **Enhanced Security Tool Evasion:** Designed to reduce the likelihood of detection by endpoint protection tools like Crowdstrike Falcon.
 
-## Why Use MultiPEASS?
+## Why Use MultiPEAS?
 
-In environments protected by advanced endpoint detection and response (EDR) solutions, security tools can sometimes prematurely terminate scripts that exhibit suspicious behavior. This can be problematic for penetration testers and red teamers who rely on tools like WinPEASS for reconnaissance and privilege escalation. MultiPEASS mitigates this risk by running each check in a separate process. This way, if a specific check is flagged and halted, the rest of the script can continue to run, ensuring that as much information as possible is gathered.
+In environments protected by advanced endpoint detection and response (EDR) solutions, security tools can sometimes prematurely terminate scripts that exhibit suspicious behavior. This can be problematic for penetration testers and red teamers who rely on tools like WinPEAS for reconnaissance and privilege escalation. MultiPEAS mitigates this risk by running each check in a separate process. This way, if a specific check is flagged and halted, the rest of the script can continue to run, ensuring that as much information as possible is gathered.
 
 ## How It Works
 
-MultiPEASS is built upon the original `WinPEASS.bat` script but introduces a fundamental change: instead of running all checks in sequence within a single process, each check is executed as a separate process. Here's a simplified overview of how it works:
+MultiPEAS is built upon the original `WinPEAS.bat` script but introduces a fundamental change: instead of running all checks in sequence within a single process, each check is executed as a separate process. Here's a simplified overview of how it works:
 
-1. **Process Creation:** For each check, MultiPEASS spawns a new process. This process runs the specific check, collects the output, and then terminates.
-2. **Result Aggregation:** The output from each individual process is collected and displayed in the console, just like in WinPEASS.
+1. **Process Creation:** For each check, MultiPEAS spawns a new process. This process runs the specific check, collects the output, and then terminates.
+2. **Result Aggregation:** The output from each individual process is collected and displayed in the console, just like in WinPEAS.
 
 ## Usage
 
 Make sure the all_checks.txt file is in the same directory as the executable compiled.
-Run MultiPEASS as you would run WinPEASS.bat:
+Run MultiPEAS as you would run WinPEAS.bat:
 
 ```bash
-MultiPEASS.exe
+MultiPEAS.exe
 ```
 
 ## Notes
 
-- MultiPEASS is designed for use in penetration testing and red team engagements. Ensure you have explicit permission to use this tool on any network or system.
-- While MultiPEASS is intended to improve compatibility with EDR solutions, it is not a guarantee that it will evade all detections. Use responsibly.
+- MultiPEAS is designed for use in penetration testing and red team engagements. Ensure you have explicit permission to use this tool on any network or system.
+- While MultiPEAS is intended to improve compatibility with EDR solutions, it is not a guarantee that it will evade all detections. Use responsibly.
 
 ## Contributions
 
@@ -43,4 +43,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- [WinPEASS](https://github.com/carlospolop/PEASS-ng) by [Carlos Polop](https://github.com/carlospolop) for the original script and inspiration.
+- [WinPEAS](https://github.com/carlospolop/PEAS-ng) by [Carlos Polop](https://github.com/carlospolop) for the original script and inspiration.
